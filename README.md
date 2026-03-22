@@ -57,40 +57,6 @@ In one day:
 
 ---
 
-## Repository Structure
-
-```
-carerhythm/
-├── firmware/               # Arduino / Raspberry Pi code for the physical device
-│   ├── main.ino            # Main loop — reads care score, drives LED colour
-│   ├── led_controller.ino  # RGB LED colour mapping (blue / yellow / orange)
-│   └── rhythm_score.ino    # Care score calculation from log timestamps
-│
-├── app/                    # Mobile app (logging interface)
-│   ├── index.html          # Entry point
-│   ├── log.js              # Care act logging — timestamps to local storage
-│   ├── score.js            # Rhythm score engine
-│   └── styles.css          # App styles
-│
-├── prototype/              # Figma prototype exports and assets
-│   ├── screens/            # All 11 screen exports (PNG)
-│   ├── icon/               # App icon assets
-│   └── storyboard/         # Storyboard frames
-│
-├── hardware/               # Physical build files
-│   ├── shell.stl           # 3D print file — device shell
-│   └── wiring_diagram.png  # LED + servo wiring schematic
-│
-├── docs/                   # Project documentation
-│   ├── persona.md          # Jone Doe persona
-│   ├── care_outcome.md     # Design rationale and care outcomes
-│   └── privacy.md          # Privacy design decisions
-│
-└── README.md
-```
-
----
-
 ## How It Works
 
 ### 1. Logging a care act
@@ -126,20 +92,6 @@ score 0–29    →  Orange  (dormant)
 ```
 
 The device updates gradually over hours, not instantly. The shift is noticed, not alarmed.
-
----
-
-## Hardware
-
-| Component | Purpose |
-|-----------|---------|
-| Raspberry Pi Zero W / Arduino Uno | Main controller |
-| RGB LED (common cathode) | Colour output |
-| Translucent white PLA shell | Light diffusion |
-| Servo motor (optional) | Surface petal movement |
-| USB power supply | Power |
-
-The shell was 3D-printed in translucent white PLA. The LED sits inside the cavity and light diffuses through the material, softening the colour output into something ambient rather than harsh.
 
 ---
 
