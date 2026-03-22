@@ -180,6 +180,7 @@ Hosted by the MSc in HCI programme at UCD School of Information and Communicatio
 ## Licence
 
 This project was built as a hackathon prototype for educational and research purposes.
+
 © 2026 Ananya Chandraker
 
 ---
